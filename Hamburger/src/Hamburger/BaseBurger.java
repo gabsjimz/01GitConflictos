@@ -4,17 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BaseBurger {
+    private double discount;
     private String name;
     private String breadRollType;
     private String meat;
     private double base_price;
     private double total_price;
+    private String size;
 
     BaseBurger(String name, String breadRollType,String meat,double basePrice){
         this.name = name;
         this.breadRollType =  breadRollType;
         this.meat = meat;
         this.base_price = basePrice;
+        this.size = "Normal";
+        this.discount = 0;
     }
     public List<Integer> additions = new ArrayList<>();
     private final double addedPrice = 23;
@@ -52,4 +56,14 @@ public class BaseBurger {
         return base_price;
     }
 
+    public void setSize(String size) {
+        this.size = size;
+    }
+    public double getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(double discount) {
+        this.discount = discount;
+    }
 }
